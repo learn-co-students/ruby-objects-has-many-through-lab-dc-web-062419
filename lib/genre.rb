@@ -16,14 +16,14 @@ class Genre
     end
 
     def songs
-        self.all.select {|genre| genre.name}
-        binding.pry
+        Song.all.select {|songs| songs.genre = self}
+    
     end
 
     def artists
-        # binding.pry
-        @@all.select {|songs|  song.name == artist.name }
-        # binding.pry
+        
+        songs.map {|song|  song.artist}
+        
     end
 
 end
